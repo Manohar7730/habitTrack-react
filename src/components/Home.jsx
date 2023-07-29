@@ -4,6 +4,10 @@ import { useSelector } from "react-redux";
 
 function Home() {
   const habits = useSelector((state) => state.habits.allHabits);
+  const getTodayStatus = (habit) => {
+    const today = new Date().toLocaleDateString("en-US", { weekday: "long" });
+    return habit.status[today] || "None";
+  };
   return (
     <Container>
       <h1>Habit Tracker</h1>
@@ -14,6 +18,7 @@ function Home() {
             {habits.map((habit) => (
               <li key={habit.id}>
                 <h3>{habit.title}</h3>
+                <p>Status: {getTodayStatus(habit)}</p>
               </li>
             ))}
           </ul>
