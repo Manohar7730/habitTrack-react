@@ -1,0 +1,58 @@
+export const dummyHabits = [
+  {
+    id: 1,
+    title: "Reading a Book",
+    description: "Read at least one chapter of a book",
+    status: {
+      Sunday: "done",
+      Saturday: "not done",
+      Friday: "done",
+      Thursday: "done",
+      Wednesday: "not done",
+      Tuesday: "none",
+      Monday: "done",
+    },
+  },
+  {
+    id: 2,
+    title: "Going to the Gym",
+    description: "Workout for at least 30 minutes",
+    status: {
+      Sunday: "none",
+      Saturday: "done",
+      Friday: "done",
+      Thursday: "none",
+      Wednesday: "done",
+      Tuesday: "done",
+      Monday: "done",
+    },
+  },
+  {
+    id: 3,
+    title: "Meditation",
+    description: "Meditate for 10 minutes",
+    status: {
+      Sunday: "done",
+      Saturday: "done",
+      Friday: "none",
+      Thursday: "none",
+      Wednesday: "done",
+      Tuesday: "done",
+      Monday: "done",
+    },
+  },
+  {
+    id: 4,
+    title: "Running",
+    description: "Run for 20 minutes",
+    status: {
+      Sunday: "done",
+      Saturday: "none",
+      Friday: "done",
+      Thursday: "done",
+      Wednesday: "done",
+      Tuesday: "not done",
+      Monday: "done",
+    },
+  },
+];
