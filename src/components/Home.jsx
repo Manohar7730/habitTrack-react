@@ -10,8 +10,8 @@ function Home() {
   };
   return (
     <Container>
-      <h1>Habit Tracker</h1>
-      <Card>
+      <h1 className="my-4">Habit Tracker</h1>
+      <Card className="my-3">
         <Card.Body>
           <h2>Today Statuses:</h2>
           <ul>

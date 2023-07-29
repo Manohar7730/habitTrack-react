@@ -1,16 +1,16 @@
 import { BrowserRouter as Routers, Routes, Route } from "react-router-dom";
-import Navbar from "./Navbar";
 import AddHabit from "./AddHabit";
 import DailyView from "./DailyView";
 import HabitList from "./HabitList";
 import Home from "./Home";
 import WeeklyView from "./WeeklyView";
+import NavbarComponent from "./Navbar";
 
 function App() {
   return (
     <>
       <Routers>
-        <Navbar />
+        <NavbarComponent />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/add-habit" element={<AddHabit />} />
