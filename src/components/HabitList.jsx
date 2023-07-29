@@ -20,7 +20,7 @@ function HabitList() {
           <div key={habit.id} className="col-md-4">
             <Card className="my-3">
               <Card.Body>
-                <Card.Title>{habit.Title}</Card.Title>
+                <Card.Title>{habit.title}</Card.Title>
                 <Card.Text>{habit.description}</Card.Text>
                 <Card.Text>
                   Todays Status:{" "}
