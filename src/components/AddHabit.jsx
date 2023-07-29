@@ -7,19 +7,50 @@ import Button from "react-bootstrap/esm/Button";
 import Container from "react-bootstrap/esm/Container";
 
 function AddHabit() {
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const handleAddHabit = () => {
+    if (title.trim() !== "" && description.trim() !== "") {
+      const newHabit = {
+        id: Date.now(),
+        title,
+        description,
+      };
+      dispatch(addHabit(newHabit));
+      setTitle("");
+      setDescription("");
+      navigate("/");
+    }
+  };
+
   return (
     <Container>
-      <h2>Add New Habit</h2>
+      <h2 className="my-4">Add New Habit</h2>
       <Form>
-        <Form.Group>
+        <Form.Group controlId="formTitle">
           <Form.Label>Title:</Form.Label>
-          <Form.Control />
+          <Form.Control
+            type="text"
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+            required
+          />
         </Form.Group>
-        <Form.Group>
+        <Form.Group controlId="formDescription">
           <Form.Label>Description:</Form.Label>
-          <Form.Control />
+          <Form.Control
+            as="textarea"
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
+            required
+          />
         </Form.Group>
-        <Button variant="primary">Add Habit</Button>
+        <Button variant="primary" onClick={handleAddHabit}>
+          Add Habit
+        </Button>
       </Form>
     </Container>
   );
