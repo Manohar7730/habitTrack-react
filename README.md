@@ -1,6 +1,6 @@
 # React + Vite
 
-https://habit-tracker-cmu5.onrender.com
+https://manohar7730.github.io/habitTrack-react/
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
