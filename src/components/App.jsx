@@ -12,7 +12,7 @@ function App() {
       <Routers>
         <NavbarComponent />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/habitTrack-react/" element={<Home />} />
           <Route path="/add-habit" element={<AddHabit />} />
           <Route path="/daily-view" element={<DailyView />} />
           <Route path="/habit-list" element={<HabitList />} />

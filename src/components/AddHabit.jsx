@@ -22,7 +22,7 @@ function AddHabit() {
       dispatch(addHabit(newHabit));
       setTitle("");
       setDescription("");
-      navigate("/");
+      navigate("/habitTrack-react/");
     }
   };
 
